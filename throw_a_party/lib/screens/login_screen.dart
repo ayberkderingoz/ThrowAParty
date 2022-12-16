@@ -161,7 +161,8 @@ class LoginScreen extends StatelessWidget {
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () => Navigator.push(context,
+                MaterialPageRoute(builder: (context) => LobbyScreen())),
                     child: Text('Log in',
                         style: TextStyle(
                             color: Colors.white,
