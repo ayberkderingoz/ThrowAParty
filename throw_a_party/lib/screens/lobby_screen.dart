@@ -3,24 +3,24 @@ import 'package:flutter/material.dart';
 import 'package:throw_a_party/screens/onboarding_screen.dart';
 import 'package:throw_a_party/constants.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
+import 'package:throw_a_party/screens/create_lobby_screen.dart';
 
 class LobbyScreen extends StatelessWidget {
   const LobbyScreen({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        elevation: 0,
-        backgroundColor: Color(0xFFEAEEF6),
-        iconTheme: IconThemeData(color: baskamavis),
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back_ios, color: visnemsi),
-          onPressed: () => Navigator.push(context,
-              MaterialPageRoute(builder: (context) => OnboardingScreen())),
+        appBar: AppBar(
+          elevation: 0,
+          backgroundColor: Color(0xFFEAEEF6),
+          iconTheme: IconThemeData(color: baskamavis),
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back_ios, color: visnemsi),
+            onPressed: () => Navigator.push(context,
+                MaterialPageRoute(builder: (context) => OnboardingScreen())),
+          ),
         ),
-      ),
-      
-      backgroundColor: Color(0xFFEAEEF6),
+        backgroundColor: Color(0xFFEAEEF6),
         body: SafeArea(
             child: Center(
                 child: Column(
@@ -43,10 +43,6 @@ class LobbyScreen extends StatelessWidget {
               ],
             ),
             SizedBox(height: 40),
-
-            
-
-            
 
             //Lobi oluşturma butonu
             Container(
@@ -73,8 +69,10 @@ class LobbyScreen extends StatelessWidget {
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: ElevatedButton(
-                    onPressed: () => Navigator.push(context,
-                MaterialPageRoute(builder: (context) => LobbyScreen())),
+                    onPressed: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => JoinLobbyScreen())),
                     child: Text('Create a lobby',
                         style: TextStyle(
                             color: Colors.white,
@@ -116,7 +114,7 @@ class LobbyScreen extends StatelessWidget {
                 ),
                 child: ElevatedButton(
                     onPressed: () => Navigator.push(context,
-                MaterialPageRoute(builder: (context) => LobbyScreen())),
+                        MaterialPageRoute(builder: (context) => LobbyScreen())),
                     child: Text('Join a lobby',
                         style: TextStyle(
                             color: Colors.white,
@@ -133,6 +131,6 @@ class LobbyScreen extends StatelessWidget {
                     ))),
             SizedBox(height: 30),
           ],
-            ))));
+        ))));
   }
 }
