@@ -39,6 +39,7 @@ dependencies:
   firebase_core: ^2.4.0
   rive: ^0.9.1
   flutter_svg: ^1.1.6
+  firebase_database: ^10.0.7
 
 dev_dependencies:
   flutter_test:
