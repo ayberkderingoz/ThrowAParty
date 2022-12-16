@@ -75,7 +75,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     child: Column(
                       children: const [
                         Text(
-                          "Learn design & code",
+                          "Plan perfect parties",
                           style: TextStyle(
                             fontSize: 60,
                             fontFamily: "Poppins",
@@ -84,7 +84,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         ),
                         SizedBox(height: 16),
                         Text(
-                          "Don’t skip design. Learn design and code, by building real apps with Flutter and Swift. Complete courses about the best tools.",
+                          "UniParty is the perfect app for planning parties for you and your loved ones. It is designed by university students for university students.",
                         ),
                       ],
                     ),
@@ -95,12 +95,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     press: () {
                       _btnAnimationColtroller.isActive = true;
                     },
-                  ),
-                  const Padding(
-                    padding: EdgeInsets.symmetric(vertical: 24),
-                    child: Text(
-                      "Purchase includes access to 30+ courses, 240+ premium tutorials, 120+ hours of videos, source files and certificates.",
-                    ),
                   ),
                 ],
               ),
