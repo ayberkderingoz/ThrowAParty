@@ -11,68 +11,26 @@ class LoginScreen extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           elevation: 0,
-          backgroundColor: Colors.white,
+          backgroundColor: Color(0xFFEAEEF6),
           iconTheme: IconThemeData(color: baskamavis),
           leading: IconButton(
             icon: Icon(Icons.arrow_back_ios, color: visnemsi),
             onPressed: () => Navigator.push(context,
                 MaterialPageRoute(builder: (context) => OnboardingScreen())),
           ),
-          actions: <Widget>[
-            Padding(
-                padding: EdgeInsets.only(right: 30.0),
-                child: IconButton(
-                  onPressed: () {},
-                  icon: Icon(Icons.language, color: visnemsi),
-                )),
-            Padding(
-                padding: EdgeInsets.only(right: 30.0),
-                child: IconButton(
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => OnboardingScreen()));
-                  },
-                  icon: Icon(Icons.dark_mode, color: pembis, size: 30),
-                ))
-          ],
         ),
-        backgroundColor: Colors.white,
+        backgroundColor: Color(0xFFEAEEF6),
         body: SafeArea(
             child: Center(
                 child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizedBox(
-              width: 250.0,
-              height: 100,
-              child: DefaultTextStyle(
-                style: const TextStyle(
-                  fontSize: 35,
-                  color: visnemsi,
-                  shadows: [
-                    Shadow(
-                      blurRadius: 7.0,
-                      color: acikpembis,
-                      offset: Offset(0, 0),
-                    ),
-                  ],
-                ),
-                child: AnimatedTextKit(
-                  repeatForever: true,
-                  animatedTexts: [
-                    FlickerAnimatedText('UniParty'),
-                  ],
-                  onTap: () {},
-                ),
-              ),
-            ),
             SizedBox(height: 30),
             //sistem yöneticisi girişi
             GradientText(
               'Login',
               style: const TextStyle(
+                fontFamily: "Poppins",
                 fontWeight: FontWeight.bold,
                 fontSize: 30,
               ),
@@ -177,7 +135,6 @@ class LoginScreen extends StatelessWidget {
             const SizedBox(height: 40),
 
             //giriş yap butonu
-
             Container(
                 width: 250,
                 height: 40,
@@ -203,8 +160,11 @@ class LoginScreen extends StatelessWidget {
                 ),
                 child: ElevatedButton(
                     onPressed: () {},
-                    child: Text('Giriş yap',
-                        style: TextStyle(color: Colors.white, fontSize: 15)),
+                    child: Text('Log in',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 15,
+                            fontFamily: "Poppins")),
                     style: ButtonStyle(
                       backgroundColor:
                           MaterialStateProperty.all<Color>(Colors.transparent),
@@ -213,7 +173,9 @@ class LoginScreen extends StatelessWidget {
                       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(18.0))),
-                    )))
+                    ))),
+            SizedBox(height: 30),
+            Text(),
           ],
         ))));
   }
