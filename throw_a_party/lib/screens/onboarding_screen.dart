@@ -25,14 +25,24 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           Positioned.fill(
               child: BackdropFilter(
             filter: ImageFilter.blur(sigmaX: 20, sigmaY: 10),
-            child: SizedBox(),
           )),
           RiveAnimation.asset("assets/RiveAssets/shapes.riv"),
           Positioned.fill(
               child: BackdropFilter(
-            filter: ImageFilter.blur(sigmaX: 500, sigmaY: 50),
+            filter: ImageFilter.blur(sigmaX: 30, sigmaY: 20),
             child: SizedBox(),
           )),
+          SafeArea(
+              child: Column(
+            children: [
+              Text("Plan perfect parties",
+                  style: TextStyle(
+                    fontSize: 60,
+                    fontFamily: "Poppins",
+                    height: 1.2,
+                  )),
+            ],
+          ))
         ],
       ),
     );
