@@ -96,6 +96,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       _btnAnimationColtroller.isActive = true;
                     },
                   ),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(vertical: 24),
+                  ),
                 ],
               ),
             ),
