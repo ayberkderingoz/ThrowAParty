@@ -39,6 +39,7 @@ dependencies:
   firebase_core: ^2.4.0
   rive: ^0.9.1
   flutter_svg: ^1.1.6
+  simple_gradient_text: ^1.2.4
   firebase_database: ^10.0.7
   animated_text_kit: ^4.2.2
 

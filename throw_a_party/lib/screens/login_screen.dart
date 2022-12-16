@@ -2,6 +2,7 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:throw_a_party/screens/onboarding_screen.dart';
 import 'package:throw_a_party/constants.dart';
+import 'package:simple_gradient_text/simple_gradient_text.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -11,9 +12,9 @@ class LoginScreen extends StatelessWidget {
         appBar: AppBar(
           elevation: 0,
           backgroundColor: Colors.white,
-          iconTheme: IconThemeData(color: Colors.yellow),
+          iconTheme: IconThemeData(color: baskamavis),
           leading: IconButton(
-            icon: Icon(Icons.arrow_back_ios, color: Colors.yellow),
+            icon: Icon(Icons.arrow_back_ios, color: visnemsi),
             onPressed: () => Navigator.push(context,
                 MaterialPageRoute(builder: (context) => OnboardingScreen())),
           ),
@@ -22,7 +23,7 @@ class LoginScreen extends StatelessWidget {
                 padding: EdgeInsets.only(right: 30.0),
                 child: IconButton(
                   onPressed: () {},
-                  icon: Icon(Icons.language, color: Colors.yellow, size: 30),
+                  icon: Icon(Icons.language, color: visnemsi),
                 )),
             Padding(
                 padding: EdgeInsets.only(right: 30.0),
@@ -69,13 +70,18 @@ class LoginScreen extends StatelessWidget {
             ),
             SizedBox(height: 30),
             //sistem yöneticisi girişi
-            Text(
+            GradientText(
               'Login',
-              style: TextStyle(
-                color: Color(0xFF2F3A58),
+              style: const TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 30,
               ),
+              colors: const [
+                saris,
+                acikmorus,
+                pembis,
+                mavis,
+              ],
             ),
             SizedBox(height: 40),
 
@@ -84,7 +90,7 @@ class LoginScreen extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
                 child: Container(
                     decoration: BoxDecoration(
-                      gradient: LinearGradient(
+                      gradient: const LinearGradient(
                         begin: Alignment.topRight,
                         end: Alignment.bottomLeft,
                         stops: [
@@ -100,25 +106,25 @@ class LoginScreen extends StatelessWidget {
                           saris,
                         ],
                       ),
-                      border: Border.all(color: Color(0xBFAA00)),
+                      border: Border.all(color: const Color(0xBFAA00)),
                       borderRadius: BorderRadius.circular(20),
                     ),
-                    child: Padding(
-                        padding: const EdgeInsets.only(left: 20.0),
+                    child: const Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 0.0),
                         child: TextField(
                           decoration: InputDecoration(
                             border: InputBorder.none,
-                            hintText: 'Kullanıcı adı',
+                            hintText: 'Username',
                           ),
                         )))),
-            SizedBox(height: 20),
+            SizedBox(height: 40),
 
             //şifre
             Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
                 child: Container(
                   decoration: BoxDecoration(
-                    gradient: LinearGradient(
+                    gradient: const LinearGradient(
                       begin: Alignment.topRight,
                       end: Alignment.bottomLeft,
                       stops: [
@@ -138,42 +144,45 @@ class LoginScreen extends StatelessWidget {
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: Padding(
-                      padding: const EdgeInsets.only(left: 20.0),
+                      padding: const EdgeInsets.symmetric(horizontal: 0.0),
                       child: Container(
                           decoration: BoxDecoration(
-                              gradient: LinearGradient(
-                            begin: Alignment.topRight,
-                            end: Alignment.bottomLeft,
-                            stops: [
-                              0.1,
-                              0.4,
-                              0.6,
-                              0.9,
-                            ],
-                            colors: [
-                              mavis,
-                              acikmorus,
-                              pembis,
-                              saris,
-                            ],
-                          )),
-                          child: TextField(
+                            gradient: const LinearGradient(
+                              begin: Alignment.topRight,
+                              end: Alignment.bottomLeft,
+                              stops: [
+                                0.1,
+                                0.4,
+                                0.6,
+                                0.9,
+                              ],
+                              colors: [
+                                mavis,
+                                acikmorus,
+                                pembis,
+                                saris,
+                              ],
+                            ),
+                            border: Border.all(color: Color(0XBFAA00)),
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          child: const TextField(
                             obscureText: true,
                             decoration: InputDecoration(
                               border: InputBorder.none,
-                              hintText: 'Şifre',
+                              hintText: 'Password',
                             ),
                           ))),
                 )),
-            SizedBox(height: 40),
+            const SizedBox(height: 40),
 
             //giriş yap butonu
 
             Container(
-                width: 167,
+                width: 250,
                 height: 40,
                 decoration: BoxDecoration(
-                  gradient: LinearGradient(
+                  gradient: const LinearGradient(
                     begin: Alignment.topRight,
                     end: Alignment.bottomLeft,
                     stops: [
