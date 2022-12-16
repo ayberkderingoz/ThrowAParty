@@ -48,7 +48,7 @@ class MyApp extends StatelessWidget {
           errorBorder: defaultInputBorder,
         ),
       ),
-      home: const LoginScreen(),
+      home: OnboardingScreen(),
       debugShowCheckedModeBanner: false,
     );
   }

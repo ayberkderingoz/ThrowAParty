@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:rive/rive.dart';
 
 import 'package:throw_a_party/components/animated_btn.dart';
+import 'package:throw_a_party/screens/login_screen.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});
@@ -85,6 +86,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     btnAnimationColtroller: _btnAnimationColtroller,
                     press: () {
                       _btnAnimationColtroller.isActive = true;
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => LoginScreen()));
                     },
                   ),
                   const Padding(
