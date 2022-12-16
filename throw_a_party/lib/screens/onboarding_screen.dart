@@ -35,12 +35,19 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           SafeArea(
               child: Column(
             children: [
-              Text("Plan perfect parties",
-                  style: TextStyle(
-                    fontSize: 60,
-                    fontFamily: "Poppins",
-                    height: 1.2,
-                  )),
+              SizedBox(
+                width: 260,
+                child: Column(
+                  children: [
+                    Text("Plan perfect parties",
+                        style: TextStyle(
+                          fontSize: 60,
+                          fontFamily: "Poppins",
+                          height: 1.2,
+                        )),
+                  ],
+                ),
+              ),
             ],
           ))
         ],
