@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:throw_a_party/screens/onboarding_screen.dart';
+import 'package:throw_a_party/constants.dart';
 
 class AdminLogin extends StatelessWidget {
   @override
@@ -30,7 +31,8 @@ class AdminLogin extends StatelessWidget {
                         MaterialPageRoute(
                             builder: (context) => OnboardingScreen()));
                   },
-                  icon: Icon(Icons.dark_mode, color: Colors.pinkAccent, size: 30),
+                  icon:
+                      Icon(Icons.dark_mode, color: Colors.pinkAccent, size: 30),
                 ))
           ],
         ),
@@ -78,7 +80,7 @@ class AdminLogin extends StatelessWidget {
                 child: Container(
                   decoration: BoxDecoration(
                     color: Color(0xFFAAB0B5),
-                    border: Border.all(color: Color(  0XBFAA00)),
+                    border: Border.all(color: Color(0XBFAA00)),
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: Padding(
@@ -102,9 +104,9 @@ class AdminLogin extends StatelessWidget {
                     child: Text('Giriş yap',
                         style: TextStyle(color: Colors.white, fontSize: 15)),
                     style: ButtonStyle(
-                      backgroundColor:
-                          MaterialStateProperty.all<Color>(Colors.limeAccent),
-                      shadowColor: MaterialStateProperty.all<Color>(),
+                      backgroundColor: MaterialStateProperty.all<Color>(visnemsi),
+                      shadowColor:
+                          MaterialStateProperty.all<Color>(Colors.deepPurple),
                       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(18.0))),
