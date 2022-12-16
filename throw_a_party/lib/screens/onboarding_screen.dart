@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:rive/rive.dart';
 
 import 'package:throw_a_party/components/animated_btn.dart';
+import 'package:throw_a_party/screens/login_screen.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});
@@ -44,7 +45,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               filter: ImageFilter.blur(sigmaX: 20, sigmaY: 10),
             ),
           ),
-          const RiveAnimation.asset("assets/RiveAssets/shapes.riv"),
+          const RiveAnimation.asset(
+              "assets/RiveAssets/onboard_animation_son.riv"),
           Positioned.fill(
             child: BackdropFilter(
               // Now it's looks perfect
@@ -84,6 +86,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     btnAnimationColtroller: _btnAnimationColtroller,
                     press: () {
                       _btnAnimationColtroller.isActive = true;
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => LoginScreen()));
                     },
                   ),
                   const Padding(

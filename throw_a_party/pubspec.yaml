@@ -40,6 +40,7 @@ dependencies:
   rive: ^0.9.1
   flutter_svg: ^1.1.6
   simple_gradient_text: ^1.2.4
+  firebase_database: ^10.0.7
 
 dev_dependencies:
   flutter_test:

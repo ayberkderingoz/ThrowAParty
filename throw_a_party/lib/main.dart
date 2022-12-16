@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:throw_a_party/screens/login_screen.dart';
 import 'package:throw_a_party/screens/onboarding_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_database/firebase_database.dart';
 import 'firebase_options.dart';
 
 Future<void> main() async {
@@ -10,6 +11,15 @@ Future<void> main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+
+  FirebaseDatabase database = FirebaseDatabase.instance;
+  DatabaseReference ref = FirebaseDatabase.instance.ref("users/123");
+
+  await ref.set({
+    "name": "John",
+    "age": 18,
+    "address": {"line1": "100 Mountain View"}
+  });
 }
 
 /*void main() {
@@ -38,7 +48,7 @@ class MyApp extends StatelessWidget {
           errorBorder: defaultInputBorder,
         ),
       ),
-      home: const LoginScreen(),
+      home: OnboardingScreen(),
       debugShowCheckedModeBanner: false,
     );
   }
