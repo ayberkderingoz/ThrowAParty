@@ -1,5 +1,6 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:throw_a_party/screens/lobby_screen.dart';
 import 'package:throw_a_party/screens/onboarding_screen.dart';
 import 'package:throw_a_party/constants.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
@@ -175,7 +176,7 @@ class LoginScreen extends StatelessWidget {
                               borderRadius: BorderRadius.circular(18.0))),
                     ))),
             SizedBox(height: 30),
-            Text(),
+            Text("a"),
           ],
         ))));
   }
