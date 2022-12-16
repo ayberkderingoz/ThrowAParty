@@ -4,6 +4,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:rive/rive.dart';
 
+import 'package:throw_a_party/components/animated_btn.dart';
+
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});
 
@@ -11,14 +13,21 @@ class OnboardingScreen extends StatefulWidget {
   State<OnboardingScreen> createState() => _OnboardingScreenState();
 }
 
+// Let's run the app
+// We are done with out scrren
+// let me show you how to create the animation on RIVE
+// On Next episode i will show you how to do this popup
+// See you on the next one
 class _OnboardingScreenState extends State<OnboardingScreen> {
-  late RiveAnimationController _btnAnimationController;
+  late RiveAnimationController _btnAnimationColtroller;
 
   @override
   void initState() {
-    _btnAnimationController = OneShotAnimation(
+    _btnAnimationColtroller = OneShotAnimation(
       "active",
       autoplay: false,
+      // Let's restart the app again
+      // No amination
     );
     super.initState();
   }
@@ -28,94 +37,77 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     return Scaffold(
       body: Stack(
         children: [
+          // At the end of the video i will show you
+          // How to create that animation on Rive
+          // Let's add blur
           Positioned(
-              //height: 100,
-              width: MediaQuery.of(context).size.width * 1.7,
-              bottom: 200,
-              left: 100,
-              child: Image.asset("assets/Backgrounds/Spline.png")),
-          Positioned.fill(
-              child: BackdropFilter(
-            filter: ImageFilter.blur(sigmaX: 20, sigmaY: 10),
-          )),
-          RiveAnimation.asset(
-            "assets/RiveAssets/shapes.riv",
-            controllers: [_btnAnimationController],
+            // height: 100,
+            width: MediaQuery.of(context).size.width * 1.7,
+            bottom: 200,
+            left: 100,
+            child: Image.asset("assets/Backgrounds/Spline.png"),
           ),
           Positioned.fill(
-              child: BackdropFilter(
-            filter: ImageFilter.blur(sigmaX: 30, sigmaY: 20),
-            child: SizedBox(),
-          )),
+            child: BackdropFilter(
+              // Now it's looks perfect
+              // See how easy
+              filter: ImageFilter.blur(sigmaX: 20, sigmaY: 10),
+            ),
+          ),
+          const RiveAnimation.asset("assets/RiveAssets/shapes.riv"),
+          Positioned.fill(
+            child: BackdropFilter(
+              // Now it's looks perfect
+              filter: ImageFilter.blur(sigmaX: 30, sigmaY: 30),
+              child: const SizedBox(),
+            ),
+          ),
+          // Let's add text
           SafeArea(
-              child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 32),
-            child: Column(
-              children: [
-                SizedBox(
-                  width: 260,
-                  child: Column(
-                    children: [
-                      Text("Plan perfect parties",
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 32),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Spacer(),
+                  SizedBox(
+                    width: 260,
+                    child: Column(
+                      children: const [
+                        Text(
+                          "Learn design & code",
                           style: TextStyle(
                             fontSize: 60,
                             fontFamily: "Poppins",
                             height: 1.2,
-                          )),
-                      Text(
-                          "UniParty is the perfect app for planning parties for you and your loved ones. It is designed by university students for university students."),
-                    ],
+                          ),
+                        ),
+                        SizedBox(height: 16),
+                        Text(
+                          "Don’t skip design. Learn design and code, by building real apps with Flutter and Swift. Complete courses about the best tools.",
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-                AnimatedBtn(
-                    btnAnimationController: _btnAnimationController,
+                  const Spacer(flex: 2),
+                  AnimatedBtn(
+                    btnAnimationColtroller: _btnAnimationColtroller,
                     press: () {
-                      _btnAnimationController.isActive = true;
-                    }),
-              ],
-            ),
-          ))
-        ],
-      ),
-    );
-  }
-}
-
-class AnimatedBtn extends StatelessWidget {
-  const AnimatedBtn({
-    Key? key,
-    required RiveAnimationController btnAnimationController,
-    required this.press,
-  })  : _btnAnimationController = btnAnimationController,
-        super(key: key);
-
-  final RiveAnimationController _btnAnimationController;
-  final VoidCallback press;
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: press,
-      child: SizedBox(
-          height: 80,
-          width: 260,
-          child: Stack(children: [
-            RiveAnimation.asset("assets/RiveAssets/button.riv"),
-            Positioned.fill(
-              top: 8,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(CupertinoIcons.arrow_right),
-                  SizedBox(width: 8),
-                  Text(
-                    "Start planning",
-                    style: TextStyle(fontWeight: FontWeight.w500),
+                      _btnAnimationColtroller.isActive = true;
+                    },
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(vertical: 24),
+                    child: Text(
+                      "Purchase includes access to 30+ courses, 240+ premium tutorials, 120+ hours of videos, source files and certificates.",
+                    ),
                   ),
                 ],
               ),
             ),
-          ])),
+          )
+        ],
+      ),
     );
   }
 }
