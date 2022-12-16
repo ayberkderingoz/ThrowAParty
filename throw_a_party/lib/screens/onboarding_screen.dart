@@ -37,16 +37,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     return Scaffold(
       body: Stack(
         children: [
-          // At the end of the video i will show you
-          // How to create that animation on Rive
-          // Let's add blur
-          Positioned(
-            // height: 100,
-            width: MediaQuery.of(context).size.width * 1.7,
-            bottom: 200,
-            left: 100,
-            child: Image.asset("assets/Backgrounds/Spline.png"),
-          ),
           Positioned.fill(
             child: BackdropFilter(
               // Now it's looks perfect
