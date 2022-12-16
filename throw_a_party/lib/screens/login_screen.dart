@@ -1,5 +1,6 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:throw_a_party/screens/lobby_screen.dart';
 import 'package:throw_a_party/screens/onboarding_screen.dart';
 import 'package:throw_a_party/screens/sign_up_screen.dart';
 import 'package:throw_a_party/constants.dart';
@@ -160,7 +161,8 @@ class LoginScreen extends StatelessWidget {
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () => Navigator.push(context,
+                MaterialPageRoute(builder: (context) => LobbyScreen())),
                     child: Text('Log in',
                         style: TextStyle(
                             color: Colors.white,
