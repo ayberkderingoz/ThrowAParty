@@ -12,6 +12,17 @@ class OnboardingScreen extends StatefulWidget {
 }
 
 class _OnboardingScreenState extends State<OnboardingScreen> {
+  late RiveAnimationController _btnAnimationController;
+
+  @override
+  void initState() {
+    _btnAnimationController = OneShotAnimation(
+      "active",
+      autoplay: false,
+    );
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,7 +38,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               child: BackdropFilter(
             filter: ImageFilter.blur(sigmaX: 20, sigmaY: 10),
           )),
-          RiveAnimation.asset("assets/RiveAssets/shapes.riv"),
+          RiveAnimation.asset(
+            "assets/RiveAssets/shapes.riv",
+            controllers: [_btnAnimationController],
+          ),
           Positioned.fill(
               child: BackdropFilter(
             filter: ImageFilter.blur(sigmaX: 30, sigmaY: 20),
@@ -53,31 +67,55 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     ],
                   ),
                 ),
-                SizedBox(
-                    height: 80,
-                    width: 260,
-                    child: Stack(children: [
-                      RiveAnimation.asset("assets/RiveAssets/button.riv"),
-                      Positioned.fill(
-                        top: 8,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Icon(CupertinoIcons.arrow_right),
-                            SizedBox(width: 8),
-                            Text(
-                              "Start planning",
-                              style: TextStyle(fontWeight: FontWeight.w500),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ])),
+                AnimatedBtn(
+                    btnAnimationController: _btnAnimationController,
+                    press: () {
+                      _btnAnimationController.isActive = true;
+                    }),
               ],
             ),
           ))
         ],
       ),
+    );
+  }
+}
+
+class AnimatedBtn extends StatelessWidget {
+  const AnimatedBtn({
+    Key? key,
+    required RiveAnimationController btnAnimationController,
+    required this.press,
+  })  : _btnAnimationController = btnAnimationController,
+        super(key: key);
+
+  final RiveAnimationController _btnAnimationController;
+  final VoidCallback press;
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: press,
+      child: SizedBox(
+          height: 80,
+          width: 260,
+          child: Stack(children: [
+            RiveAnimation.asset("assets/RiveAssets/button.riv"),
+            Positioned.fill(
+              top: 8,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(CupertinoIcons.arrow_right),
+                  SizedBox(width: 8),
+                  Text(
+                    "Start planning",
+                    style: TextStyle(fontWeight: FontWeight.w500),
+                  ),
+                ],
+              ),
+            ),
+          ])),
     );
   }
 }
