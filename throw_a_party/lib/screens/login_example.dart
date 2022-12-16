@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:throw_a_party/screens/onboarding_screen.dart';
 
 class AdminLogin extends StatelessWidget {
   @override
@@ -6,19 +7,19 @@ class AdminLogin extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           elevation: 0,
-          backgroundColor: lightBackground,
-          iconTheme: IconThemeData(color: pickledBluewood),
+          backgroundColor: Colors.yellow,
+          iconTheme: IconThemeData(color: Colors.yellow),
           leading: IconButton(
-            icon: Icon(Icons.arrow_back_ios, color: pickledBluewood),
+            icon: Icon(Icons.arrow_back_ios, color: Colors.yellow),
             onPressed: () => Navigator.push(context,
-                MaterialPageRoute(builder: (context) => LandingPage())),
+                MaterialPageRoute(builder: (context) => OnboardingScreen())),
           ),
           actions: <Widget>[
             Padding(
                 padding: EdgeInsets.only(right: 30.0),
                 child: IconButton(
                   onPressed: () {},
-                  icon: Icon(Icons.language, color: pickledBluewood, size: 30),
+                  icon: Icon(Icons.language, color: Colors.yellow, size: 30),
                 )),
             Padding(
                 padding: EdgeInsets.only(right: 30.0),
@@ -27,19 +28,19 @@ class AdminLogin extends StatelessWidget {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => DarkAdminLogin()));
+                            builder: (context) => OnboardingScreen()));
                   },
-                  icon: Icon(Icons.dark_mode, color: pickledBluewood, size: 30),
+                  icon: Icon(Icons.dark_mode, color: Colors.pinkAccent, size: 30),
                 ))
           ],
         ),
-        backgroundColor: lightBackground,
+        backgroundColor: Colors.amberAccent,
         body: SafeArea(
             child: Center(
                 child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(Icons.admin_panel_settings, size: 70, color: pickledBluewood),
+            Icon(Icons.admin_panel_settings, size: 70, color: Colors.blueGrey),
             SizedBox(height: 30),
             //sistem yöneticisi girişi
             Text(
@@ -58,7 +59,7 @@ class AdminLogin extends StatelessWidget {
                 child: Container(
                     decoration: BoxDecoration(
                       color: Color(0xFFAAB0B5),
-                      border: Border.all(color: pickledBluewood),
+                      border: Border.all(color: Color(0xBFAA00)),
                       borderRadius: BorderRadius.circular(20),
                     ),
                     child: Padding(
@@ -77,7 +78,7 @@ class AdminLogin extends StatelessWidget {
                 child: Container(
                   decoration: BoxDecoration(
                     color: Color(0xFFAAB0B5),
-                    border: Border.all(color: pickledBluewood),
+                    border: Border.all(color: Color(  0XBFAA00)),
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: Padding(
@@ -102,8 +103,8 @@ class AdminLogin extends StatelessWidget {
                         style: TextStyle(color: Colors.white, fontSize: 15)),
                     style: ButtonStyle(
                       backgroundColor:
-                          MaterialStateProperty.all<Color>(cinnabar),
-                      shadowColor: MaterialStateProperty.all<Color>(sinbad),
+                          MaterialStateProperty.all<Color>(Colors.limeAccent),
+                      shadowColor: MaterialStateProperty.all<Color>(),
                       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(18.0))),
