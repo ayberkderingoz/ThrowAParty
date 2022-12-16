@@ -22,10 +22,15 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               bottom: 200,
               left: 100,
               child: Image.asset("assets/Backgrounds/Spline.png")),
-          RiveAnimation.asset("assets/RiveAssets/shapes.riv"),
           Positioned.fill(
               child: BackdropFilter(
             filter: ImageFilter.blur(sigmaX: 20, sigmaY: 10),
+            child: SizedBox(),
+          )),
+          RiveAnimation.asset("assets/RiveAssets/shapes.riv"),
+          Positioned.fill(
+              child: BackdropFilter(
+            filter: ImageFilter.blur(sigmaX: 500, sigmaY: 50),
             child: SizedBox(),
           )),
         ],
