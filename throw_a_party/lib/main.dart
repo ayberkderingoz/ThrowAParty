@@ -9,17 +9,27 @@ import 'firebase_options.dart';
 Future<void> main() async {
   runApp(const MyApp());
   await Firebase.initializeApp(
+    name: "db2",
     options: DefaultFirebaseOptions.currentPlatform,
   );
 
-  FirebaseDatabase database = FirebaseDatabase.instance;
-  DatabaseReference ref = FirebaseDatabase.instance.ref("users/123");
-
+  //FirebaseDatabase database = FirebaseDatabase.instance;
+  /*DatabaseReference ref = FirebaseDatabase.instance.ref("users/123");
+  print(ref.key);
   await ref.set({
     "name": "John",
     "age": 18,
-    "address": {"line1": "100 Mountain View"}
-  });
+  });*/
+
+  FirebaseApp secondaryApp = Firebase.app('db2');
+  FirebaseDatabase database = FirebaseDatabase.instanceFor(app: secondaryApp);
+  print("xD");
+  //final databaseReference = FirebaseDatabase.instance.ref();
+  print(database.ref().key);
+  database
+      .ref()
+      .child("message")
+      .set({"text": ":D", "timestamp": DateTime.now().toString()});
 }
 
 /*void main() {
@@ -48,7 +58,7 @@ class MyApp extends StatelessWidget {
           errorBorder: defaultInputBorder,
         ),
       ),
-      home: OnboardingScreen(),
+      home: const LoginScreen(),
       debugShowCheckedModeBanner: false,
     );
   }

@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "721631261035",
+    "firebase_url": "https://uniparty-9b14f-default-rtdb.europe-west1.firebasedatabase.app",
     "project_id": "uniparty-9b14f",
     "storage_bucket": "uniparty-9b14f.appspot.com"
   },
@@ -29,6 +30,13 @@
             {
               "client_id": "721631261035-080tsjpk1or12uu3bvl8jcpig9ghhj5g.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "721631261035-pdlj39q119ujh7ls88hkmvkvc243mjo0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.throwAParty"
+              }
             }
           ]
         }
