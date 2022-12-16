@@ -1,3 +1,4 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:throw_a_party/screens/onboarding_screen.dart';
 import 'package:throw_a_party/constants.dart';
@@ -33,7 +34,7 @@ class LoginScreen extends StatelessWidget {
                         MaterialPageRoute(
                             builder: (context) => OnboardingScreen()));
                   },
-                  icon: Icon(Icons.dark_mode, color: visnemsi, size: 30),
+                  icon: Icon(Icons.dark_mode, color: pembis, size: 30),
                 ))
           ],
         ),
@@ -43,6 +44,30 @@ class LoginScreen extends StatelessWidget {
                 child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            SizedBox(
+              width: 250.0,
+              height: 100,
+              child: DefaultTextStyle(
+                style: const TextStyle(
+                  fontSize: 35,
+                  color: visnemsi,
+                  shadows: [
+                    Shadow(
+                      blurRadius: 7.0,
+                      color: acikpembis,
+                      offset: Offset(0, 0),
+                    ),
+                  ],
+                ),
+                child: AnimatedTextKit(
+                  repeatForever: true,
+                  animatedTexts: [
+                    FlickerAnimatedText('UniParty'),
+                  ],
+                  onTap: () {},
+                ),
+              ),
+            ),
             SizedBox(height: 30),
             //sistem yöneticisi girişi
             GradientText(
@@ -85,7 +110,7 @@ class LoginScreen extends StatelessWidget {
                       borderRadius: BorderRadius.circular(20),
                     ),
                     child: const Padding(
-                        padding:  EdgeInsets.symmetric(horizontal: 0.0),
+                        padding: EdgeInsets.symmetric(horizontal: 0.0),
                         child: TextField(
                           decoration: InputDecoration(
                             border: InputBorder.none,
@@ -149,7 +174,7 @@ class LoginScreen extends StatelessWidget {
                             ),
                           ))),
                 )),
-           const  SizedBox(height: 40),
+            const SizedBox(height: 40),
 
             //giriş yap butonu
 
