@@ -2,13 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:throw_a_party/screens/onboarding_screen.dart';
 import 'package:throw_a_party/constants.dart';
 
-class AdminLogin extends StatelessWidget {
+class LoginScreen extends StatelessWidget {
+  const LoginScreen({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
           elevation: 0,
-          backgroundColor: Colors.yellow,
+          backgroundColor: Colors.white,
           iconTheme: IconThemeData(color: Colors.yellow),
           leading: IconButton(
             icon: Icon(Icons.arrow_back_ios, color: Colors.yellow),
@@ -33,11 +34,11 @@ class AdminLogin extends StatelessWidget {
                             builder: (context) => OnboardingScreen()));
                   },
                   icon:
-                      Icon(Icons.dark_mode, color: Colors.pinkAccent, size: 30),
+                      Icon(Icons.dark_mode, color: pembis, size: 30),
                 ))
           ],
         ),
-        backgroundColor: Colors.amberAccent,
+        backgroundColor: Colors.white,
         body: SafeArea(
             child: Center(
                 child: Column(
@@ -47,7 +48,7 @@ class AdminLogin extends StatelessWidget {
             SizedBox(height: 30),
             //sistem yöneticisi girişi
             Text(
-              'Sistem Yöneticisi Girişi',
+              'Login',
               style: TextStyle(
                 color: Color(0xFF2F3A58),
                 fontWeight: FontWeight.bold,
@@ -61,7 +62,22 @@ class AdminLogin extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
                 child: Container(
                     decoration: BoxDecoration(
-                      color: Color(0xFFAAB0B5),
+                      gradient: LinearGradient(
+                        begin: Alignment.topRight,
+                        end: Alignment.bottomLeft,
+                        stops: [
+                          0.1,
+                          0.4,
+                          0.6,
+                          0.9,
+                        ],
+                        colors: [
+                          mavis,
+                          acikmorus,
+                          pembis,
+                          saris,
+                        ],
+                      ),
                       border: Border.all(color: Color(0xBFAA00)),
                       borderRadius: BorderRadius.circular(20),
                     ),
@@ -80,32 +96,92 @@ class AdminLogin extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
                 child: Container(
                   decoration: BoxDecoration(
-                    color: Color(0xFFAAB0B5),
+                    gradient: LinearGradient(
+                        begin: Alignment.topRight,
+                        end: Alignment.bottomLeft,
+                        stops: [
+                          0.1,
+                          0.4,
+                          0.6,
+                          0.9,
+                        ],
+                        colors: [
+                          mavis,
+                          acikmorus,
+                          pembis,
+                          saris,
+                        ],
+                      ),
                     border: Border.all(color: Color(0XBFAA00)),
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: Padding(
                       padding: const EdgeInsets.only(left: 20.0),
-                      child: TextField(
+                      
+                      child: Container(
+                        decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                            begin: Alignment.topRight,
+                        end: Alignment.bottomLeft,
+                        stops: [
+                          0.1,
+                          0.4,
+                          0.6,
+                          0.9,
+                        ],
+                        colors: [
+                          mavis,
+                          acikmorus,
+                          pembis,
+                          saris,
+                        ],
+                          )
+                        ),
+                        child: TextField(
                         obscureText: true,
                         decoration: InputDecoration(
                           border: InputBorder.none,
                           hintText: 'Şifre',
                         ),
-                      )),
+                      )
+                      )
+                      ),
                 )),
             SizedBox(height: 40),
 
             //giriş yap butonu
-            SizedBox(
+            
+            
+             Container(
+              
                 width: 167,
                 height: 40,
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                        begin: Alignment.topRight,
+                        end: Alignment.bottomLeft,
+                        stops: [
+                          0.1,
+                          0.4,
+                          0.6,
+                          0.9,
+                        ],
+                        colors: [
+                          mavis,
+                          acikmorus,
+                          pembis,
+                          saris,
+                        ],
+                      ),
+                      border: Border.all(color: Color(0xBFAA00)),
+                      borderRadius: BorderRadius.circular(20),
+                ),
                 child: ElevatedButton(
                     onPressed: () {},
                     child: Text('Giriş yap',
                         style: TextStyle(color: Colors.white, fontSize: 15)),
                     style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all<Color>(visnemsi),
+                      backgroundColor: MaterialStateProperty.all<Color>(Colors.transparent),
                       shadowColor:
                           MaterialStateProperty.all<Color>(Colors.deepPurple),
                       shape: MaterialStateProperty.all<RoundedRectangleBorder>(

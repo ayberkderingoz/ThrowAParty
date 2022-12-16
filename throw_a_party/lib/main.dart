@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:throw_a_party/screens/login_screen.dart';
 import 'package:throw_a_party/screens/onboarding_screen.dart';
 
 void main() {
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
           errorBorder: defaultInputBorder,
         ),
       ),
-      home: const OnboardingScreen(),
+      home: const LoginScreen(),
       debugShowCheckedModeBanner: false,
     );
   }
