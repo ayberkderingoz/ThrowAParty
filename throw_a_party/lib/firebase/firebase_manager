@@ -1,0 +1,23 @@
+import 'package:firebase_database/firebase_database.dart';
+
+class FirebaseManager {
+  static FirebaseManager instance;
+  DatabaseReference reference;
+  Function(DatabaseReference) initializationComplete;
+
+  FirebaseManager() {
+    if (instance == null) {
+      instance = this;
+    }
+  }
+
+  void init() async {
+    try {
+      await Firebase.initializeApp();
+      reference = FirebaseDatabase.instance.reference();
+      initializationComplete(reference);
+    } catch (e) {
+      print('Firebase dependencies failed to initialize: $e');
+    }
+  }
+}
