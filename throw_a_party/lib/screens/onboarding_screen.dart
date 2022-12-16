@@ -6,6 +6,7 @@ import 'package:rive/rive.dart';
 
 import 'package:throw_a_party/components/animated_btn.dart';
 import 'package:throw_a_party/screens/login_screen.dart';
+import 'package:throw_a_party/screens/sign_up_screen.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});
@@ -89,7 +90,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => LoginScreen()));
+                              builder: (context) => SignUpScreen()));
                     },
                   ),
                   const Padding(
