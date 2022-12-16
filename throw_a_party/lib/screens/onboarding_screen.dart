@@ -16,6 +16,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     return Scaffold(
       body: Stack(
         children: [
+          Positioned(
+              //height: 100,
+              width: MediaQuery.of(context).size.width * 1.7,
+              bottom: 200,
+              left: 100,
+              child: Image.asset("assets/Backgrounds/Spline.png")),
           RiveAnimation.asset("assets/RiveAssets/shapes.riv"),
           Positioned.fill(
               child: BackdropFilter(

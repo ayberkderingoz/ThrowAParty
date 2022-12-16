@@ -28,6 +28,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       home: const OnboardingScreen(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
