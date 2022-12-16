@@ -10,34 +10,15 @@ class SignUpScreen extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           elevation: 0,
-          backgroundColor: Colors.white,
+          backgroundColor: Color(0xFFEAEEF6),
           iconTheme: IconThemeData(color: baskamavis),
           leading: IconButton(
             icon: Icon(Icons.arrow_back_ios, color: visnemsi),
             onPressed: () => Navigator.push(context,
                 MaterialPageRoute(builder: (context) => OnboardingScreen())),
           ),
-          actions: <Widget>[
-            Padding(
-                padding: EdgeInsets.only(right: 30.0),
-                child: IconButton(
-                  onPressed: () {},
-                  icon: Icon(Icons.language, color: visnemsi),
-                )),
-            Padding(
-                padding: EdgeInsets.only(right: 30.0),
-                child: IconButton(
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => OnboardingScreen()));
-                  },
-                  icon: Icon(Icons.dark_mode, color: visnemsi, size: 30),
-                ))
-          ],
         ),
-        backgroundColor: Colors.white,
+        backgroundColor: Color(0xFFEAEEF6),
         body: SafeArea(
             child: Center(
                 child: Column(
@@ -46,8 +27,9 @@ class SignUpScreen extends StatelessWidget {
             SizedBox(height: 30),
             //sistem yöneticisi girişi
             GradientText(
-              'Sign Up',
+              'Sign Up to UniParty',
               style: const TextStyle(
+                fontFamily: "Poppins",
                 fontWeight: FontWeight.bold,
                 fontSize: 30,
               ),
@@ -85,7 +67,7 @@ class SignUpScreen extends StatelessWidget {
                       borderRadius: BorderRadius.circular(20),
                     ),
                     child: const Padding(
-                        padding:  EdgeInsets.symmetric(horizontal: 0.0),
+                        padding: EdgeInsets.symmetric(horizontal: 0.0),
                         child: TextField(
                           decoration: InputDecoration(
                             border: InputBorder.none,
@@ -94,7 +76,7 @@ class SignUpScreen extends StatelessWidget {
                         )))),
             SizedBox(height: 40),
 //E-mail
-           Padding(
+            Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
                 child: Container(
                     decoration: BoxDecoration(
@@ -118,7 +100,7 @@ class SignUpScreen extends StatelessWidget {
                       borderRadius: BorderRadius.circular(20),
                     ),
                     child: const Padding(
-                        padding:  EdgeInsets.symmetric(horizontal: 0.0),
+                        padding: EdgeInsets.symmetric(horizontal: 0.0),
                         child: TextField(
                           decoration: InputDecoration(
                             border: InputBorder.none,
@@ -181,8 +163,8 @@ class SignUpScreen extends StatelessWidget {
                             ),
                           ))),
                 )),
-           const  SizedBox(height: 40),
-            
+            const SizedBox(height: 40),
+
             //kayıt ol butonu
 
             Container(
@@ -211,7 +193,10 @@ class SignUpScreen extends StatelessWidget {
                 child: ElevatedButton(
                     onPressed: () {},
                     child: Text('Sign Up',
-                        style: TextStyle(color: Colors.white, fontSize: 15)),
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 15,
+                            fontFamily: "Poppins")),
                     style: ButtonStyle(
                       backgroundColor:
                           MaterialStateProperty.all<Color>(Colors.transparent),
