@@ -5,8 +5,8 @@ import 'package:throw_a_party/constants.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 import 'package:throw_a_party/screens/lobby_screen.dart';
 
-class JoinLobbyScreen extends StatelessWidget {
-  const JoinLobbyScreen({super.key});
+class CreateLobbyScreen extends StatelessWidget {
+  const CreateLobbyScreen({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(

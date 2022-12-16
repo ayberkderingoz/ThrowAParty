@@ -4,6 +4,7 @@ import 'package:throw_a_party/screens/onboarding_screen.dart';
 import 'package:throw_a_party/constants.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 import 'package:throw_a_party/screens/create_lobby_screen.dart';
+import 'package:throw_a_party/screens/join_lobby_screen.dart';
 
 class LobbyScreen extends StatelessWidget {
   const LobbyScreen({super.key});
@@ -69,10 +70,8 @@ class LobbyScreen extends StatelessWidget {
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: ElevatedButton(
-                    onPressed: () => Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => JoinLobbyScreen())),
+                    onPressed: () => Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => CreateLobbyScreen())),
                     child: Text('Create a lobby',
                         style: TextStyle(
                             color: Colors.white,
@@ -113,8 +112,10 @@ class LobbyScreen extends StatelessWidget {
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: ElevatedButton(
-                    onPressed: () => Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => LobbyScreen())),
+                    onPressed: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => JoinLobbyScreen())),
                     child: Text('Join a lobby',
                         style: TextStyle(
                             color: Colors.white,
