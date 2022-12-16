@@ -45,7 +45,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             ),
           ),
           const RiveAnimation.asset(
-              "assets/RiveAssets/onboard_animation_loop.riv"),
+              "assets/RiveAssets/onboard_animation_son.riv"),
           Positioned.fill(
             child: BackdropFilter(
               // Now it's looks perfect
