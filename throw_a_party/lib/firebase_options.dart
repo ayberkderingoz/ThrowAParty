@@ -49,6 +49,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '721631261035',
     projectId: 'uniparty-9b14f',
     authDomain: 'uniparty-9b14f.firebaseapp.com',
+    databaseURL: 'https://uniparty-9b14f-default-rtdb.europe-west1.firebasedatabase.app',
     storageBucket: 'uniparty-9b14f.appspot.com',
     measurementId: 'G-W2X413JM9H',
   );
@@ -58,6 +59,7 @@ class DefaultFirebaseOptions {
     appId: '1:721631261035:android:4f7f52c65b89b19b5a5c2e',
     messagingSenderId: '721631261035',
     projectId: 'uniparty-9b14f',
+    databaseURL: 'https://uniparty-9b14f-default-rtdb.europe-west1.firebasedatabase.app',
     storageBucket: 'uniparty-9b14f.appspot.com',
   );
 
@@ -66,6 +68,7 @@ class DefaultFirebaseOptions {
     appId: '1:721631261035:ios:b03a057acf6b74a25a5c2e',
     messagingSenderId: '721631261035',
     projectId: 'uniparty-9b14f',
+    databaseURL: 'https://uniparty-9b14f-default-rtdb.europe-west1.firebasedatabase.app',
     storageBucket: 'uniparty-9b14f.appspot.com',
     iosClientId: '721631261035-pdlj39q119ujh7ls88hkmvkvc243mjo0.apps.googleusercontent.com',
     iosBundleId: 'com.example.throwAParty',
@@ -76,6 +79,7 @@ class DefaultFirebaseOptions {
     appId: '1:721631261035:ios:b03a057acf6b74a25a5c2e',
     messagingSenderId: '721631261035',
     projectId: 'uniparty-9b14f',
+    databaseURL: 'https://uniparty-9b14f-default-rtdb.europe-west1.firebasedatabase.app',
     storageBucket: 'uniparty-9b14f.appspot.com',
     iosClientId: '721631261035-pdlj39q119ujh7ls88hkmvkvc243mjo0.apps.googleusercontent.com',
     iosBundleId: 'com.example.throwAParty',
