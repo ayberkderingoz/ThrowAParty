@@ -159,7 +159,7 @@ class JoinLobbyScreen extends StatelessWidget {
                 ),
                 child: ElevatedButton(
                     onPressed: () => Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => LobbyScreen())),
+                        MaterialPageRoute(builder: (context) => OnboardingScreen())),
                     child: Text('JOIN',
                         style: TextStyle(
                             color: Colors.white,

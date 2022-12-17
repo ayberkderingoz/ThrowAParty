@@ -5,6 +5,7 @@ import 'package:throw_a_party/screens/onboarding_screen.dart';
 import 'package:throw_a_party/constants.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 import 'package:throw_a_party/screens/create_lobby_screen.dart';
+import 'package:throw_a_party/screens/join_lobby_screen.dart';
 
 class LobbyScreen extends StatelessWidget {
   const LobbyScreen({super.key});
