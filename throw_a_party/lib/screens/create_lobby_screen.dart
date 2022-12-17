@@ -4,9 +4,12 @@ import 'package:throw_a_party/screens/onboarding_screen.dart';
 import 'package:throw_a_party/constants.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 import 'package:throw_a_party/screens/lobby_screen.dart';
+import 'package:throw_a_party/screens/public_lobby_screen.dart';
 
 class CreateLobbyScreen extends StatelessWidget {
-  const CreateLobbyScreen({super.key});
+  bool isPrivate = false;
+  CreateLobbyScreen({Key? key, required bool isPrivate}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -158,8 +161,19 @@ class CreateLobbyScreen extends StatelessWidget {
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: ElevatedButton(
-                    onPressed: () => Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => LobbyScreen())),
+                    onPressed: () {
+                      if (isPrivate == true) {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => LobbyScreen()));
+                      } else {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => PublicLobbyScreen()));
+                      }
+                    },
                     child: Text('CREATE',
                         style: TextStyle(
                             color: Colors.white,
