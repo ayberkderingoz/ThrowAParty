@@ -53,6 +53,7 @@ dependencies:
   image_picker: ^0.8.6
   bubble: ^1.2.1
   contactus: ^1.2.0
+  vote: ^2.1.0
 
 dev_dependencies:
   flutter_test:
