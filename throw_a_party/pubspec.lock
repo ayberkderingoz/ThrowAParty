@@ -499,6 +499,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "4.2.4"
+  regexpattern:
+    dependency: "direct main"
+    description:
+      name: regexpattern
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.1.0"
   rive:
     dependency: "direct main"
     description:
