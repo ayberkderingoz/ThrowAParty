@@ -162,7 +162,7 @@ class JoinLobbyScreen extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                             builder: (context) => OnboardingScreen())),
-                    child: Text('JOIN',
+                    child: Text('Join',
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 15,

@@ -174,7 +174,7 @@ class CreateLobbyScreen extends StatelessWidget {
                                 builder: (context) => PublicLobbyScreen()));
                       }
                     },
-                    child: Text('CREATE',
+                    child: Text('Create',
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 15,
