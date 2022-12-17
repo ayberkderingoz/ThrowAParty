@@ -51,6 +51,7 @@ dependencies:
   uuid: ^3.0.7
   image_picker: ^0.8.6
   bubble: ^1.2.1
+  vote: ^2.1.0
 
 dev_dependencies:
   flutter_test:
