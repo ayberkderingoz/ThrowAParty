@@ -12,8 +12,10 @@ import 'package:intl/date_symbol_data_local.dart';
 import 'package:mime/mime.dart';
 import 'package:open_filex/open_filex.dart';
 import 'package:path_provider/path_provider.dart';
+import 'package:throw_a_party/constants.dart';
 import 'package:uuid/uuid.dart';
 import 'package:bubble/bubble.dart';
+
 
 class PublicLobbyScreen extends StatefulWidget {
   const PublicLobbyScreen({super.key});
@@ -62,7 +64,7 @@ class PublicLobbyScreenState extends State<PublicLobbyScreen> {
         color: _user.id != message.author.id ||
                 message.type == types.MessageType.image
             ? const Color(0xFF000000)
-            : const Color(0xff6f61e8),
+            : visnemsi,
         margin: nextMessageInGroup
             ? const BubbleEdges.symmetric(horizontal: 6)
             : null,
