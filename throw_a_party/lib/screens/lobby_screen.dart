@@ -1,5 +1,6 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:throw_a_party/components/etkinlik_carousel.dart';
 import 'package:throw_a_party/components/mekan_carousel.dart';
 import 'package:throw_a_party/screens/onboarding_screen.dart';
 import 'package:throw_a_party/constants.dart';
@@ -41,7 +42,13 @@ class LobbyScreen extends StatelessWidget {
         ),
       ),
       backgroundColor: Color(0xFFEAEEF6),
-      body: CarouselComponent(),
+      body: Column(
+        children: [
+          CarouselComponent(),
+          SizedBox(height: 5),
+          EtkinlikCarousel(),
+        ],
+      ),
       bottomNavigationBar: BottomNavigationBar(
         selectedItemColor: Colors.red,
         unselectedItemColor: Colors.grey.shade600,

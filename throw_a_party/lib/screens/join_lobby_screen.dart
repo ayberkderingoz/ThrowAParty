@@ -29,7 +29,7 @@ class JoinLobbyScreen extends StatelessWidget {
             SizedBox(height: 30),
 
             GradientText(
-              'Create a lobby',
+              'Join a lobby',
               style: const TextStyle(
                 fontFamily: "Poppins",
                 fontWeight: FontWeight.bold,
@@ -158,8 +158,10 @@ class JoinLobbyScreen extends StatelessWidget {
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: ElevatedButton(
-                    onPressed: () => Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => OnboardingScreen())),
+                    onPressed: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => OnboardingScreen())),
                     child: Text('JOIN',
                         style: TextStyle(
                             color: Colors.white,
